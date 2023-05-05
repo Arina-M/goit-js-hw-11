@@ -3,7 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import './css/styles.css';
 import refs from './js/refs';
-import { getImages } from './js/get_images';
+import { getImages } from './js/getImages';
 
 let currentPage = 1;
 
