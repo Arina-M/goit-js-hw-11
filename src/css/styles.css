@@ -1,0 +1,118 @@
+* ,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+}
+
+.header {
+    backdrop-filter: blur(0.8px);
+    background: rgba(255, 228, 199, 1);
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+}
+
+.main-input {
+    border: transparent;
+    border-radius: 2px;
+    height: 30px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.main-input:focus{
+    outline: none;
+}
+
+.main-input::placeholder{
+    font-size: 15px;
+}
+
+.searchBTN{
+    background-color: rgba(255, 91, 15, 1);
+    border: transparent;
+    border-radius: 3px;
+    font-size: 17px;
+    padding: 5px 10px;
+    margin-left: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.searchBTN:hover,
+.searchBTN:focus{
+    background-color: rgba(255, 91, 15, 0.6);
+}
+
+.opac {
+    opacity: 0.5;
+}
+
+.search-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.photo-card:hover {
+    transform: scale(1.03);
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+button {
+    cursor: pointer;
+}
