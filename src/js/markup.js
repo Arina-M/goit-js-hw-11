@@ -1,15 +1,6 @@
 export function createMarkup(images) {
     return images
-      .map(
-        ({
-          webformatURL,
-          largeImageURL,
-          tags,
-          likes,
-          views,
-          comments,
-          downloads,
-        }) =>
+      .map(({webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>
           `<div class="photo-card">
             <a href="${largeImageURL}">
               <img src="${webformatURL}" alt="${tags}" width="640" height="426" loading="lazy" />
@@ -33,6 +24,5 @@ export function createMarkup(images) {
               </p>
             </div>
           </div>`
-      )
-      .join('');
+      ).join('');
   }

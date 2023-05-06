@@ -27,7 +27,7 @@ export async function getImages(name, page = 1) {
 
   const response = await axios.get(`${BASE_URL}?${params}&page=${page}`);
   const datas = response.data;
-  refs.loadmore.hidden = false;
+  refs.loadmore.style.display = "block";
 
  
   if (page === 1 && datas.totalHits !== 0) {
@@ -39,7 +39,7 @@ export async function getImages(name, page = 1) {
 
   if (refs.card.childNodes.length + 1 > datas.totalHits && datas.totalHits !== 0) {
     refs.loadmore.hidden = true;
-    Notiflix.Notify.warning("We're sorry, but you've reached the end of search results.");
+    Notiflix.Notify.warning("Sorry, but you've reached the end of search results.");
   }
 
   if (!datas.hits.length) {

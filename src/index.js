@@ -7,7 +7,6 @@ import { getImages } from './js/getImages';
 
 let currentPage = 1;
 
-
 const gallery = new SimpleLightbox('.gallery a');
 
 refs.search.addEventListener('submit', onSearch);
@@ -16,7 +15,8 @@ refs.loadmore.addEventListener('click', onLoad);
 async function onSearch(event) {
   event.preventDefault();
   refs.card.innerHTML = '';
-  refs.loadmore.hidden = true;
+  refs.loadmore.style.display = "none";
+
   if (!refs.search.elements.searchQuery.value) {
     return;
   }
