@@ -24,7 +24,10 @@ async function onSearch(event) {
   try {
     const cardImage = await getImages(refs.search.elements.searchQuery.value);
     refs.search.elements[1].disabled = false;
-    gallery.refresh(); 
+    gallery.refresh();
+    
+    currentPage = 1;  
+
     return cardImage;
   } catch (error) {
     console.log(error);

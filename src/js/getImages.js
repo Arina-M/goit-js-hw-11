@@ -13,7 +13,7 @@ Notiflix.Notify.init({
 const axios = require('axios').default;
 
 const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '35659797-8cc42750c81fcd96097728ed9';
+const API_KEY = '36132963-ae980ea5b1e92ccaac12cb36f';
 
 export async function getImages(name, page = 1) {
   const params = new URLSearchParams({
@@ -38,12 +38,12 @@ export async function getImages(name, page = 1) {
 
 
   if (refs.card.childNodes.length + 1 > datas.totalHits && datas.totalHits !== 0) {
-    refs.loadmore.hidden = true;
+    refs.loadmore.style.display = "none";
     Notiflix.Notify.warning("Sorry, but you've reached the end of search results.");
   }
 
   if (!datas.hits.length) {
-    refs.loadmore.hidden = true;
+    refs.loadmore.style.display = "none";
     Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
     return;
   }
